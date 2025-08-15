@@ -4,16 +4,5 @@
       "source": "/(.*)",
       "destination": "/"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ],
-  "functions": {
-    "src/app/page.tsx": {
-      "maxDuration": 10
-    }
-  }
+  ]
 } 
