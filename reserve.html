@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sideout Pickleball</title>
+    <title>Reserve - Sideout Pickleball</title>
     <link rel="icon" href="cropped-sideoutfavicon-32x32.png">
     <link rel="shortcut icon" href="cropped-sideoutfavicon-32x32.png">
     <link rel="apple-touch-icon" href="cropped-sideoutfavicon-32x32.png">
@@ -122,7 +122,7 @@
             box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
         }
 
-        .reserve-button {
+        .home-button {
             background-color: transparent;
             color: white;
             font-weight: bold;
@@ -136,12 +136,12 @@
             transition: all 0.2s;
         }
 
-        .reserve-button:hover {
+        .home-button:hover {
             background-color: white;
             color: #43546E;
         }
 
-        .reserve-button:focus {
+        .home-button:focus {
             outline: none;
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
         }
@@ -166,17 +166,17 @@
             <img src="side-out-logo.svg" alt="Sideout Pickleball Logo">
         </div>
 
-        <h1 class="title">Sideout Pickleball</h1>
+        <h1 class="title">Reserve Courts</h1>
 
         <h2 class="subtitle">
-            Best Courts, Best lighting, Best Play
+            Book Your Court Time
         </h2>
 
-        <p class="maintenance-text">Our site is currently undergoing maintenance.</p>
+        <p class="maintenance-text">Our reservation system is currently being updated. Please contact us to reserve your court time.</p>
 
         <div class="button-container">
             <button class="contact-button" id="contactBtn">Contact Us</button>
-            <button class="reserve-button" id="reserveBtn">Reserve Courts</button>
+            <button class="home-button" id="homeBtn">Back to Home</button>
         </div>
     </div>
 
@@ -184,13 +184,13 @@
         $(document).ready(function() {
             $('#contactBtn').click(function() {
                 const to = encodeURIComponent('Info@sopbcenters.com');
-                const subject = encodeURIComponent('contact from website');
-                const body = encodeURIComponent('Message from website');
+                const subject = encodeURIComponent('court reservation request');
+                const body = encodeURIComponent('I would like to reserve a court. Please provide available times and pricing information.');
                 window.open(`mailto:${to}?subject=${subject}&body=${body}`, '_blank');
             });
 
-            $('#reserveBtn').click(function() {
-                window.location.href = '/reserve.html';
+            $('#homeBtn').click(function() {
+                window.location.href = '/';
             });
         });
     </script>
