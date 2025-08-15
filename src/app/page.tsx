@@ -55,6 +55,7 @@ export default function Home() {
         {/* Contact Button */}
         <div className="flex justify-center">
           <button
+            type="button"
             onClick={handleContact}
             className="py-3 px-4 rounded-md hover:opacity-90 font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 transition-opacity duration-200 font-medium font-krona-one"
             style={{
