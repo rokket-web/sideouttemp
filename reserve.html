@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserve - Sideout Pickleball</title>
+    <title>Sideout Pickleball</title>
     <link rel="icon" href="cropped-sideoutfavicon-32x32.png">
     <link rel="shortcut icon" href="cropped-sideoutfavicon-32x32.png">
     <link rel="apple-touch-icon" href="cropped-sideoutfavicon-32x32.png">
@@ -82,7 +82,7 @@
             font-size: 3.75rem;
             font-weight: bold;
             color: white;
-            margin-bottom: 2rem;
+            margin-bottom: .5rem;
         }
 
         .subtitle {
@@ -97,6 +97,8 @@
             color: white;
             font-size: 1.125rem;
             margin-bottom: 2rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: normal;
         }
 
         .button-container {
@@ -129,7 +131,7 @@
             box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
         }
 
-        .home-button {
+        .reserve-button {
             background-color: transparent;
             color: white;
             font-weight: bold;
@@ -143,12 +145,12 @@
             transition: all 0.2s;
         }
 
-        .home-button:hover {
+        .reserve-button:hover {
             background-color: white;
             color: #43546E;
         }
 
-        .home-button:focus {
+        .reserve-button:focus {
             outline: none;
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
         }
@@ -165,17 +167,22 @@
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            display: flex;
             align-items: center;
             justify-items: center;
+            flex-direction: column;
         }
-
+        .footer-section-container {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            margin:25px auto;
+        }
         .footer-section {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+            margin:0 25px;
         }
 
         .footer-section h3 {
@@ -272,23 +279,19 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p>Phone: (555) 123-4567</p>
-                <a href="mailto:Info@sopbcenters.com">Email: Info@sopbcenters.com</a>
-            </div>
+            <div class="footer-section-container">
+                 <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Phone: (425) 513-8946</p>
+                    <a href="mailto:Info@sopbcenters.com">Email: Info@sopbcenters.com</a>
+                </div>
             
-            <div class="footer-section">
-                <h3>Address</h3>
-                <p>2716 119th Street SW</p>
-                <p>Everett, WA 98204</p>
+                <div class="footer-section">
+                    <h3>Address</h3>
+                    <p><a href="https://www.google.com/maps/dir//2716+119th+St+SW,+Everett,+WA+98204/@47.8895226,-122.2731616,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x5490040390bea905:0xe5d968d80f66d064!2m2!1d-122.2705867!2d47.8895226!3e0!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">2716 119th Street SW<br>
+                        Everett, WA 98204</a></p>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h3></h3>
-                
-            </div>
-            
             <div class="copyright">
                 <p>&copy; 2025 Sideout Pickleball Centers. All rights reserved.</p>
             </div>
@@ -299,13 +302,13 @@
         $(document).ready(function() {
             $('#contactBtn').click(function() {
                 const to = encodeURIComponent('Info@sopbcenters.com');
-                const subject = encodeURIComponent('court reservation request');
-                const body = encodeURIComponent('I would like to reserve a court. Please provide available times and pricing information.');
+                const subject = encodeURIComponent('contact from website');
+                const body = encodeURIComponent('Message from website');
                 window.open(`mailto:${to}?subject=${subject}&body=${body}`, '_blank');
             });
 
-            $('#homeBtn').click(function() {
-                window.location.href = '/';
+            $('#reserveBtn').click(function() {
+                window.location.href = '/reserve.html';
             });
         });
     </script>
