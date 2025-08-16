@@ -25,6 +25,7 @@
             flex-direction: column;
             position: relative;
             overflow-x: hidden;
+            color:#fff;
         }
 
         .main-content {
@@ -154,7 +155,16 @@
             outline: none;
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
         }
-
+        #app_links {
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            max-width:420px;
+            margin:20px auto;
+        }
+        #app_links img {
+            max-width:200px;
+        }
         .footer {
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
@@ -234,6 +244,18 @@
                 text-align: center;
             }
         }
+        @media screen and (max-width:485px) {
+            #app_links {
+                flex-direction: column;
+            }
+            #app_links img {
+                margin:10px auto;
+            }
+            .footer-section-container {
+                display: flex;
+                flex-direction: column;            
+            }
+        }
     </style>
 </head>
 <body>
@@ -243,7 +265,7 @@
     <div class="main-content">
         <div class="content">
             <div class="logo">
-                <img src="side-out-logo.svg" alt="Sideout Pickleball Logo">
+                <a href="/"><img src="side-out-logo.svg" alt="Sideout Pickleball Logo"></a>
             </div>
 
             <h1 class="title">Reserve Courts</h1>
@@ -251,29 +273,8 @@
             <h2 class="subtitle">
                 Book Your Court Time
             </h2>
-            <div id="widget-mount"></div>
-                    <script src="https://work1.plan2play.com/js/widgets/widget.js"></script>
-                    <script>
-                        EmbeddableWidget.mount({
-                            widgetcode: "882f1cb73f0bd432a7622c1de2c5cd3a5eca075b",
-                            accentColor: "#215396",
-                            parentElement: "#widget-mount",
-                        });
-                    </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <script type="text/javascript" src="https://ecommerce.merchantware.net/v1/CayanCheckoutPlus.js"></script>
-
-    <div id="widget-mount"></div>
-                    <script src="https://work1.plan2play.com/js/widgets/appointment-widget.js"></script>
-                    <script>
-                        EmbeddableWidget.mount({
-                            widgetcode: "882f1cb73f0bd432a7622c1de2c5cd3a5eca075b",
-                            accentColor: "#215396",
-                            parentElement: "#widget-mount",
-                        });
-                    </script>
+            <p>Use the Plan2Play App to reserve courts and sign up for open play.</p>
+            <div id="app_links"><a target="_blank" href="https://mqnfr.app.link/mDMLAoC2N1"><img src="app_store_apple.png"/></a><a target="_blank" href="https://mqnfr.app.link/mDMLAoC2N1"><img src="app_store_google.png"/></a></div>
         </div>
     </div>
 
